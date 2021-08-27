@@ -1,0 +1,127 @@
+/* 1366 ноутбук
+1200 ноутбук по меньше
+1024 планшеты айпады
+768 телефоны с больш экраном
+540 или 640 телефоны*/
+
+
+/* Адаптив */
+@media (max-width:1980px){
+ 
+}
+
+@media (max-width:1366px){
+
+}
+
+@media (max-width:1200px){
+
+}
+
+@media (max-width:1024px){
+    .container{
+        max-width: 100%;
+        width: auto;
+
+    }
+   
+    header .search{
+        width: auto;
+    }
+    header .search input[type="text"]{
+        width: auto;
+
+    }
+    .right-block2{
+        width: 490px;
+    }
+}
+
+@media (max-width:768px){
+    .container{
+        max-width: 100%;
+        width: auto;
+
+    }
+    .block-a {
+        width: 100%;
+        float: none; 
+        height: auto;     
+    }
+    header{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    header .logo{
+        float: none;
+        width: 100%;
+        margin-top: 0;
+
+    }
+    header .search{
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+
+    }
+    header .search input[type="text"]{
+        width: auto;
+
+    }
+    header .phone{
+        float: none;
+        margin-bottom: 0;
+        margin-top: 30px;
+
+    }
+    header .phone i.icon-phone{
+        position: relative;
+        left: 0;
+
+    }
+    section.menu-section {
+        margin-top: 30px;
+
+    }
+    .main-block{
+        padding-left: 0;
+    }
+    section .main-block ul li:nth-of-type(1){
+        margin-left: 0;
+    }
+    section .main-block ul li {
+        margin-right: 0;
+    }
+    .slider-right{
+        width: 100%;
+        background-size: 90%;
+    }
+    .category-block{
+        width: 100%;
+        position: relative;
+    }
+    .right-block{
+        margin-left: 0;
+    }
+    .right-block2{
+        margin-left: 0;
+        width: auto;
+    }
+    .block-a {
+        width: 100%;
+        float: none; 
+        height: auto;     
+    }
+    section .main-block ul li{
+        float: none;
+    }
+}
+
+@media (max-width:640px){
+
+}
+
+@media (max-width:540px){
+
+}

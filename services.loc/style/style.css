@@ -1,0 +1,461 @@
+/*Шрифты*/
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto/Roboto-Regular.eot');
+	src: local('☺'), url('../fonts/Roboto/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype'), url('../fonts/Roboto/Roboto-Regular.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto/Roboto-Bold.eot');
+	src: local('☺'), url('../fonts/Roboto/Roboto-Bold.woff') format('woff'), url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype'), url('../fonts/Roboto/Roboto-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto/Roboto-Light.eot');
+	src: local('☺'), url('../fonts/Roboto/Roboto-Light.woff') format('woff'), url('../fonts/Roboto/Roboto-Light.ttf') format('truetype'), url('../fonts/Roboto/Roboto-Light.svg') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+/*основные стили*/
+html,body{
+    font-family: 'Roboto';
+    font-size: 16px;
+    padding: 0;
+    margin: 0;/*внешний отступ*/
+    max-width:100%;
+    overflow-x: hidden;
+}
+h1{
+    font-size: 16px;
+    font-family: "Roboto";
+}
+/*строка ввода для поиска*/
+input[type="text"]{
+    padding: 8px 10px;
+    
+    border:1px solid #000;
+}
+button{/*кнопка поиск*/
+    padding: 8px 10px;
+    
+    border:1px solid #000;
+}
+i.icon-phone{
+    display: inline-block;
+    background-image: url(../images/icons/phone.png);
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    background-repeat: no-repeat;/*отменили повторение изображения*/
+    
+}
+/*общий контейнер*/
+.container{
+    width: 992px;
+    margin: 0 auto;
+    padding:0 15px;
+}
+.clear{/*помогает привести к нормальному виду когда есть float*/
+    clear: both;
+}
+/*шапка*/
+header{
+    background: #f2f2f2;
+    padding-bottom: 60px;
+
+}header .logo{
+    width: 200px;
+    margin: 30px 0;
+    float: left;
+}
+header .logo a{
+    text-decoration: none;/*убираем подчеркивание у ссылки*/
+    color: #333;
+
+}
+header .logo span{
+display:block;
+font-weight: 500;
+}
+header .logo span.top{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+header .logo span.bottom{
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+header .search{
+    margin-top: 35px;
+    float: left;
+    width: 550px;
+    margin-left: 60px;
+    
+}
+
+header .search input[type="text"]{
+    width:390px
+}
+
+header .phone{
+    float: right;
+    margin: 35px 0;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+
+header .phone i.icon-phone{
+    position: absolute;
+    left: -45px;
+    
+}
+header .phone a{
+    text-decoration: none;/*убираем подчеркивание у ссылки*/
+    color: #333;
+}
+header .phone a:hover{
+    color:#34B1DA;
+    transition: 0.2s;
+}
+/*Меню категории*/
+section.menu-section{
+    margin-top:-60px;
+
+}
+.category-block{
+    width: 235px;
+    position: absolute;/*берет всю область для кнопки*/
+
+}
+.category-block h2{
+    padding: 15px;
+    line-height: 30px;
+    margin: 0;
+    display:block;
+    background: #34B1DA;
+    color:#fff ;
+   
+}
+ul.left-menu{
+    padding: 0;
+    margin: 0;
+}
+ul.left-menu > li{
+    list-style: none;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;/*делает линию сплошной*/
+    border-color:#34b1da;/*задаем цвет границы*/
+    line-height: 15px;
+    position:relative;
+    
+    
+}
+ul.left-menu li a{
+    text-decoration: none;/*убираем подчеркивание у ссылки*/
+    background: #f2f2f2;
+    font-size: 18px;
+    display: block;
+    color: #000;
+    padding: 15px;
+    line-height: 1.2rem;/*высота строки а текст в ней выравнивается по центру*/
+   
+}
+ul.left-menu li a:hover span{
+   color:#34B1DA;
+   transition: 0.2s;
+}
+/*sub menu*/
+ul.left-menu > li:hover > ul.sub-menu{
+    display: block;/*ставим чтобы при наведении меню показалось*/
+}
+ul.left-menu li ul.sub-menu{
+    position: absolute;
+    width: 245px;
+    z-index: 10;/*нумерация слоя при позиционировании*/
+    left: 220px;
+    top: 0;
+    display: none;/*ставим чтобы скрыть доп меню*/
+
+
+}
+ul.left-menu li ul.sub-menu li{/*здесь пропишем дизайн вспл кнопок*/
+   
+    list-style: none;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;/*делает линию сплошной*/
+    border-color:#34b1da;/*задаем цвет границы*/
+    line-height: 15px;
+    background: #f2f2f2;
+    font-size: 18px;
+    display: block;
+    color: #000;
+
+}
+ul.left-menu li ul.sub-menu li:nth-of-type(1){/*обратились к конкретному элементу  и задали верхнюю границу в сплыв меню у первой строки*/
+    border-width: 1px ;
+}
+
+
+/*Меню главное*/
+
+
+.main-block{
+   padding-left: 260px;/*отступ с лева*/
+}
+
+section .main-block ul.right-menu{
+    background: #34b1da;
+    margin: 0;
+    padding: 0;
+}
+section .main-block ul.right-menu::after{/*псевдокласс ставится где нельзя подставлять другие теги начинается с ::*/
+    content:"";
+    display: block;
+    clear: both;/*ставим для float*/
+}
+section .main-block ul li{
+    margin-right: 25px;
+    list-style: none;/*убираем значки перед ссылкой или списком*/
+    display:block;
+    float: left;
+   
+}
+section .main-block ul li:nth-of-type(1){/*обращение к конкретному элементу в данном случае к 1 ссылке в горизонт меню*/
+    margin-left: 20px;
+}
+section .main-block ul li a{
+
+    text-decoration: none;/*убираем подчеркивание у ссылки*/
+    color: #fff;
+    line-height: 30px;
+    background: #34b1da;
+    padding: 15px 5px 15px 45px;
+    position: relative;/*внутренние блоки у которых стоит position absolute будут позицианироваться относительно него*/
+    display: block;/* делает элемент блоком*/
+    
+ 
+}
+section .main-block ul li a i{
+    position: absolute;
+    top:15px;
+    display: block;
+    left: 10px;
+}
+
+
+/*ссылки на иконки в горизонтальном меню*/
+i.icon-home{
+    background-image: url("../images/icons/home.png");
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    background-repeat: no-repeat;/*отменили повторение изображения*/
+    display: inline-block;
+   
+   
+}
+i.icon-products{
+    background-image: url("../images/icons/products.png");
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    background-repeat: no-repeat;/*отменили повторение изображения*/
+    display: inline-block;
+  
+}
+i.icon-service{
+    background-image: url("../images/icons/service.png");
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    background-repeat: no-repeat;/*отменили повторение изображения*/
+    display: inline-block;
+
+}
+i.icon-news{
+    background-image: url("../images/icons/news.png");
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    background-repeat: no-repeat;/*отменили повторение изображения*/
+    display: inline-block;
+
+}
+i.icon-contact{
+    background-image: url("../images/icons/contact.png");  
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    background-repeat: no-repeat;/*отменили повторение изображения*/
+    display: inline-block;
+ 
+}
+nav ul.right-menu li a span:hover{
+     color:#000;
+   transition: 0.2s;
+}
+
+/* right-block третий блок slider */
+.right-block{
+    margin-left: 260px;
+    margin-top: 15px;
+}
+.main-slider{
+
+    background-color: #f2f2f2;
+}
+.main-slider img{
+    width: 100%;
+}
+.slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+.slider-left{
+    width: 228px;
+    margin-right: 15px;
+    height: 334px;
+    /* border:#000 1px solid; */
+    float:left;
+
+
+}
+.slider-right{
+    float: left;
+    width: 475px;
+    height: 334px;
+    /* border:#000 1px solid; */
+    background-repeat: no-repeat;/*отменили повторение изображения*/
+    background-image: url("../images/cats.png");
+    background-size: 100%;/*растягивает фон на 100 %*/
+}
+.slider-right-contact{
+    float: right;
+    width: 520px;
+    height: 334px;
+    /* border:#000 1px solid; */
+    background-repeat: no-repeat;/*отменили повторение изображения*/
+    background-image: url("../");
+    background-size: 100%;/*растягивает фон на 100 %*/
+}
+.slider-right-service{
+    float: right;
+    width: 520px;
+    height: 334px;
+    /* border:#000 1px solid; */
+    background-repeat: no-repeat;/*отменили повторение изображения*/
+    background-image: url("../");
+    background-size: 100%;/*растягивает фон на 100 %*/
+}
+.slider-left-service{
+    width: 200px;
+    height: 334px;
+    /* border:#000 1px solid; */
+    float:left;
+}
+
+
+
+/* 4 блок */
+.right-block2{
+    margin-left: 260px;
+    margin-top: 15px;
+    width: 730px;
+    
+    
+}
+.right-block2::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.cat-slider img{
+    height: 130px;
+}
+.block-a{
+    width: 228px;
+    height: 130px;
+    /* border:#000 1px solid; */
+    float:left;
+    margin-right: 15px;
+    /* background-image: url("../images/cats1.png"); */
+}
+.block-a img{
+    width: 100%;
+}
+
+.block-a:nth-last-of-type(1){
+    margin-right: 0;
+}
+footer{
+    background-color: #333;
+    margin-top: 20px;
+    height: 150px;
+    color: #fff;
+}
+.popup-block{
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.5);
+}
+#email-pop{
+    background-color: rgba(52,177,218,0.5);
+}
+.popup-block.active{
+    display: block;
+
+}
+.popup-window{
+    width: 50%;
+    height: 500px;
+    margin: 100px auto;
+    background-color: #fff;
+
+}
+.popup-open{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 0 50px;
+}
+.close-pop{
+    float: right;
+}
+.container-form{
+
+}
+input.c{
+    width: 90%;
+    height: 150px;
+}
+
+
+
+.accordion h3.active{
+    color: #34B1DA;
+}
+
+
+
+    
+
+
+
+
+
+
+
